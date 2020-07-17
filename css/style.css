@@ -7,7 +7,7 @@ html {
   font-size: 10px;
 }
 body {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #181818; 
   background:#fff;
   font-family: 'Spoqa Han Sans';
@@ -24,7 +24,34 @@ body {
   width: 940px;
 }
 .header {
-  background-color: yellow;
+  background-color: #fff;
+  position: relative;
+  padding: 0 30px 0 30px;
+  border-radius: 0 0 15px 15px;
+}
+.logo {
+  position: absolute;
+  top: 45px;
+  left: 65px;
+}
+.member {
+  list-style-type: none;
+  text-align: right;
+  padding-left: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: -8px;
+  font-size: 0;
+}
+.member li, .member a {
+  display: inline-block;
+}
+.member li {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.member a {
+  padding: 2px 8px 2px 3px;
 }
 .visual {
   background-color: lime;

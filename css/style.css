@@ -17,7 +17,7 @@ body {
   font-weight: 400;
 }
 /* 숨김 콘텐츠 */
-.a11y-hidden {
+.a11y-hidden, legend {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -78,7 +78,7 @@ a {
 }
 /* 메인 메뉴 */
 .menu {
-  background: #ff8228 linear-gradient(to bottom, #f4c730 0%,#ff8228 35%,#ff8228 70%,#f4c730 100%);
+  background: #e65400 linear-gradient(to bottom, #ff9100 0%,#e65400 35%,#e65400 70%,#ff9100 100%);
   padding: 0;
   list-style: none;
   margin: 0 0 35px;
@@ -221,8 +221,8 @@ a {
   padding: 30px;
 }
 .group1 {
-  background-color: pink;
   width: 250px;
+  /* background-color: pink; */
 }
 .group2 {
   background-color: lightgreen;
@@ -232,6 +232,157 @@ a {
   background-color: coral;
   width: 190px;
 }
+/* 로그인 */
+/* .login {
+  background-color: orangered;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 1px gray;
+}
+.login-form fieldset {
+  border: 0;
+  padding: 8px;
+  position: relative;
+}
+
+.login-heading {
+  color: #ff0;
+  margin-left: 20px;
+}
+.login-form {
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  font: 9px;
+}
+.login-form label {
+  display: inline-block;
+  width: 52px;
+}
+.login-form .user-email {
+  margin-bottom: 8px;
+}
+.login-form .user-pw {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+
+.user-email input{
+  width: 100px;
+}
+.user-pw input {
+  width: 100px;
+}
+.btn-login {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  background-color: orangered;
+  padding: 0;
+  border: 0;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.member-only {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+} */
+.login {
+  padding: 10px;
+  background-color: #e65400;
+  background-image: radial-gradient(circle at right top, #ff8800, #e65400 ); /* 원형 그라디언트 */
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 #bbb;
+}
+.login-heading {
+  color: yellow;
+  font-weight: 700px;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+.login-form {
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; 
+  padding: 10px 10px 0 10px;
+}
+.login-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #aaa;
+}
+.login-form div {
+  width: 150px;
+  margin-bottom: 5px;
+}
+.login-form label {
+  display: inline-block; 
+  /* inline블록인 라벨에 inline-block으로 줘서 레이아웃을 유지하며 width값을 부여함 */
+  width: 55px;
+}
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 0.5em;  /* 입력란에 여백 */
+}
+.btn-login {
+  width: 50px;
+  height: 52px;
+  border-radius: 3px;
+  border: 0;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #e65400;
+  /* 버튼은 기본 보더와 패딩값을 갖고있어서 초기화해줘야됨 */
+  font-size: 1.3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.member-only {
+  background-color: #fff;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+.member-only li:first-child {
+  float: left;
+}
+.member-only li:last-child {
+  float: right;
+}
+.member-only a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.member-only a::before {
+  content: '\e803'; 
+  font-family: 'fontello';
+  /* 이게 중요 이걸 꼭 써야함 */
+  display: inline-block;
+  margin-right: .2em;
+  color: #e65400;
+}
+
+/* 슬로건 */
 .slogan {
   background-color: orange;
   

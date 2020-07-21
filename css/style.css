@@ -222,7 +222,7 @@ a {
 }
 .group1 {
   width: 250px;
-  /* background-color: pink; */
+  background-color: pink;
 }
 .group2 {
   background-color: lightgreen;
@@ -301,6 +301,7 @@ a {
   background-image: radial-gradient(circle at right top, #ff8800, #e65400 ); /* 원형 그라디언트 */
   border-radius: 5px;
   box-shadow: 5px 5px 0 0 #bbb;
+  width: calc(100% - 5px);
 }
 .login-heading {
   color: yellow;
@@ -380,6 +381,32 @@ a {
   display: inline-block;
   margin-right: .2em;
   color: #e65400;
+}
+/* 유효성 검사 배너 링크 */
+.validation-list {
+  background-color: #ff0;
+  margin-top: 25px;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+.validation-list a {
+  padding: 8px 10px 8px 45px;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: 1px solid #aaa;
+  background-color: #ccc;
+  background-image: url(./images/validation_icon.png), linear-gradient(180deg, #ccc, #eee);
+  background-repeat: no-repeat, repeat;
+  background-position: 15px 50%, 0 0;
+  display: block;
+  /* background: url(./images/validation_icon.png) no-repeat 10% scroll,#fff linear-gradient(to bottom, #ccc 0%, #fff 70%, #fff 100%); */
+}
+
+.validation-list a:hover {
+  color: #f00;
+  background-image: url(./images/validation_icon.png), linear-gradient(180deg, #ccc, #eee);
+  background-repeat: no-repeat, repeat;
 }
 
 /* 슬로건 */

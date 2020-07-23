@@ -448,76 +448,102 @@ a {
   height: 24px;
   padding: 0 10px;
 }
-/* 공지사항 및 자료실 영역 */
+/* 공지사항 및 자료실 */
 .board {
-  /* background-color: pink; */
-  margin-top: 25px;
+  background-color: yellow;
+  margin-top: 20px; /* 20 떨어지게.. 이해 안됨*/
   position: relative;
+  min-height: 180px; /* ul에 absolute를 줘서 높이를 잃어버렸으니까*/
 }
-.notice-heading, .pds-heading {
-  font-size: 1.4rem;
-  font-weight: 400;
-  background: #ccc linear-gradient(180deg, #ccc, #fff);
-  height: 34px;
-  padding: 10px 10px;
-  border: 1px solid #aaa;
-  border-radius: 5px 5px 0 0;
-
-}
-
-.notice-more, .pds-more {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.notice-heading {
-  float: left;
-  margin: 0;
-}
+.notice-heading,
 .pds-heading {
-  position: absolute;
-  top: -12px;
-  left: 73px;
+  background-color: pink;
+  float: left;
+  margin: 0 ; /*h2태그의 기본값 초기화*/
+  font-size: 1.4rem;
+  font-weight: 400; /*스포카한산스 regular로 하려고*/
 }
-.notice-list, .pds-list {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 10px;
+.tab {  /*그냥 탭일때 비활성화탭*/
+  display: block;
+  color: #666;
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0 ;
+  padding: 5px 10px;
+  background: #ccc linear-gradient(180deg, #ccc, #eee);;
 }
-.pds-list li, .notice-list li {
-  margin-top: 10px;
-}
-.pds-list a, .notice-list a {
-  display: inline-block;
-  width: 300px;
+.tab-act .tab { /* 상태디자인 */
+  color: #e65400;
+  border-color: #e65400 #e65400 #fff #e65400;
+  background: #fff; /*백그라운드 컬러로 하면 안됨 그라디언트가 그대로 남음 비활성화일때 백그라운드였으니까 이번에도 백그라운드로 해야된다고 함*/
 }
 
-.pds-list a::before, .notice-list a::before {
+.notice-list, 
+.pds-list, 
+.notice-more, 
+.pds-more {
+  display: none;   /*겹쳐있으니까 하나만 보여주려면 일단 다 none으로*/
+}
+
+.tab-act .notice-list, 
+.tab-act .pds-list, 
+.tab-act .notice-more, 
+.tab-act .pds-more {
+  display: block;   /*우선순위를 더 높여서 tab-act가 포함된 애는 none해제*/
+}
+.notice-list, 
+.pds-list {
+  background-color: silver;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 45px; /*헤딩태그랑 겹치지 않게 떨어뜨려놓는 것*/
+  left: 0;
+  width: 100%; /*앱솔루트를 주면 콘텐트만큼ㅁ만 너비값을 갖기 때문에 너비값을 따로 줘야됨*/
+}
+.notice-list li::after, .pds-list li::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.notice-list a::before,
+.pds-list a::before {
   content: '\f192';
   font-family: 'fontello';
   display: inline-block;
-  margin-right: 10px;
+  margin-right: .2em;
 }
 
+.notice-list a, .pds-list a {
+  background-color: skyblue;
+  float: left;
+  width:300px;
+  text-overflow: ellipsis; /*길면 점ㅁ점점으로 해결*/
+  overflow: hidden;
+  white-space: nowrap;
+}
+.notice-list time, .pds-list time {
+  background-color: violet;
+  float: right;
+}
+.notice-list li, 
+.pds-list li{
+  background-color: orangered;
+  margin-bottom: 10px;
+}
+.notice-more,
+.pds-more {
+  /* background-color: lime; */
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+  /* pointer너비를 느려주려 패딩을 추가하되 포지션은 그대로 하기위해 조정 */
+} 
+.icon-plus::before {
+  color: hsla(110, 70%, 50%, 1);
+}
 
-.notice-list::before {
-  content:"";
-  display: block;
-  clear: both;
-}
-.pds-list::before {
-  content:"";
-  display: block;
-  clear: both;
-}
-.pds-list {
-  display: block;
-}
-
-.notice-list {
-  display: none;
-}
 
 /* 슬로건 */
 .slogan {

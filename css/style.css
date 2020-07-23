@@ -122,6 +122,10 @@ a {
   padding-left: 0;
   list-style: none;
   white-space: nowrap;
+  display: none;
+}
+.menu-act .sub-menu {
+  display: block;
 }
 .sub-menu li, .sub-menu a{
   display: inline-block;
@@ -138,6 +142,10 @@ a {
   margin-right: .2em;
   margin-left: .2em;
 }
+.sub-menu a:hover,
+.sub-menu a:focus {
+  color: red;
+}
 .sub-menu a:hover::before,
 .sub-menu a:focus::before {
   content: '\e800';
@@ -148,24 +156,7 @@ a {
 .sub-menu4, .sub-menu5, .sub-menu6 {
   right: 0;
 }
-.sub-menu1{
-  display: block;
-}
-.sub-menu2{
-  display: none;
-}
-.sub-menu3{
-  display: none;
-}
-.sub-menu4{
-  display: none;
-}
-.sub-menu5{
-  display: none;
-}
-.sub-menu6{
-  display: none;
-}
+
 /* 비주얼 */
 @keyframes textAni {
   0% {
@@ -450,18 +441,25 @@ a {
 }
 /* 공지사항 및 자료실 */
 .board {
-  background-color: yellow;
+  /* background-color: yellow; */
   margin-top: 20px; /* 20 떨어지게.. 이해 안됨*/
   position: relative;
-  min-height: 180px; /* ul에 absolute를 줘서 높이를 잃어버렸으니까*/
+  padding-top: 45px;
 }
 .notice-heading,
 .pds-heading {
   background-color: pink;
-  float: left;
   margin: 0 ; /*h2태그의 기본값 초기화*/
   font-size: 1.4rem;
   font-weight: 400; /*스포카한산스 regular로 하려고*/
+  position: absolute;
+  top: 0;
+}
+.notice-heading {
+  left: 0;
+}
+.pds-heading {
+  left: 73px;
 }
 .tab {  /*그냥 탭일때 비활성화탭*/
   display: block;
@@ -492,14 +490,11 @@ a {
 }
 .notice-list, 
 .pds-list {
-  background-color: silver;
+  /* background-color: silver; */
   list-style: none;
   margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 45px; /*헤딩태그랑 겹치지 않게 떨어뜨려놓는 것*/
-  left: 0;
-  width: 100%; /*앱솔루트를 주면 콘텐트만큼ㅁ만 너비값을 갖기 때문에 너비값을 따로 줘야됨*/
+  min-height: 130px;
+  padding-left: 0;
 }
 .notice-list li::after, .pds-list li::after {
   content: "";
@@ -515,7 +510,7 @@ a {
 }
 
 .notice-list a, .pds-list a {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   float: left;
   width:300px;
   text-overflow: ellipsis; /*길면 점ㅁ점점으로 해결*/
@@ -523,12 +518,12 @@ a {
   white-space: nowrap;
 }
 .notice-list time, .pds-list time {
-  background-color: violet;
+  /* background-color: violet; */
   float: right;
 }
 .notice-list li, 
 .pds-list li{
-  background-color: orangered;
+  /* background-color: orangered; */
   margin-bottom: 10px;
 }
 .notice-more,

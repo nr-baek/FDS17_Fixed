@@ -595,18 +595,18 @@ a {
   /* background-color: skyblue; */
 }
 
-/* 신규 이벤트 및 관련 사이트*/
+/* 신규 이벤트 및 관련 사이트, 인기 사이트*/
 .gradient-box {
   border: 1px solid #aaa;
   border-radius: 5px;
   padding: 10px;
   background: #ccc linear-gradient(180deg, #cccc, #eee);
 }
-.event-heading, .related-heading {
+.event-heading, .related-heading, .favorite-heading {
   font-size: 1.6rem;
   margin: 0;
 }
-.event-heading span, .related-heading span {
+.event-heading span, .related-heading span, .favorite-heading span {
   color: #e65400;
 }
 /* 신규 이벤트 */
@@ -681,7 +681,7 @@ a {
   height: 27px;
   transition: all 400ms;
 }
-.related-list:hover {
+.related-list:hover, .related-list:focus {
   height: 147px;
   padding: 10px 0;
 }
@@ -694,6 +694,78 @@ a {
   text-indent: 1em;
 }
 
+/* 인기 사이트 */
+.group3 .gradient-box:nth-child(2) {
+  margin-top: 20px;
+}
+.favorite {
+  position: relative;
+}
+.favorite-list {
+  /* background-color: #ff0; */
+  margin: 10px 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+/* .favorite-list li {
+  counter-increment: pig;
+  margin-top: 5px;
+  background-color: purple;
+  position: relative;
+} */
+.favorite-list li {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  counter-increment: pig;
+  margin-top: 5px;
+}
+.favorite-list li::before {
+  content: counter(pig);
+  /* display: inline-block; */
+  padding: 2px 5px;
+  color: #fff;
+  background-color: #aaa;
+  border-radius: 2px;
+  margin-right: 5px;
+  font-size: 1.3rem;
+}
+.favorite-list a {
+  /* background-color: lime; */
+  /* display: inline-block; */
+  flex-grow: 1;
+}
+.up, .down, .stop {
+  font-style: normal;
+  width: 9px;
+  height: 11px;
+  /* display: inline-block; */
+  /* background-color: pink; */
+  overflow: hidden;
+  padding-top: 11px;
+  background: url(./images/rank.png);
+  background-repeat: no-repeat;
+  /* position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -5px; */
+}
+.up {
+  background-position: 0 0;
+}
+.stop {
+  background-position: 0 50%;
+}
+.down {
+  background-position: 0 100%;
+}
+
+.favorite-more {
+  position: absolute;
+  padding: 8px;
+  top: -8px;
+  right: -8px;
+}
 
 /* 슬로건 */
 .slogan {

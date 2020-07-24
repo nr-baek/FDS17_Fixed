@@ -593,6 +593,75 @@ a {
   /* background-color: skyblue; */
 }
 
+/* 신규 이벤트 및 관련 사이트*/
+/* 신규 이벤트 */
+.gradient-box {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  background: #ccc linear-gradient(180deg, #cccc, #eee);
+}
+
+/* ir기법 */
+/* .btn-wrap {
+  background-color: #ff0;
+  height: 18px;
+}
+.btn-prev, .btn-next {
+  background: #ccc url(./images/back_forward.png) no-repeat;
+  width: 19px;
+  height: 100%;
+  border: 0;
+  padding: 18px 0 0 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+.btn-next {
+  background-position: -35px 0;
+} */
+/* aria 기법 */
+
+.event {
+  /* background: #ff0; */
+  border-bottom: 1px solid #aaa;
+  position: relative;
+}
+.event-heading {
+  font-size: 1.6rem;
+  margin: 0;
+}
+.event-heading span {
+  color: #e65400;
+}
+.event-thumbnail, .event-brief {
+  margin: 10px 0;
+}
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #999;
+}
+.event-brief em {
+  font-style: normal;
+}
+.btn-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.btn-prev, .btn-next {
+  background-image: url(./images/back_forward.png);
+  background-repeat: no-repeat;
+  width: 19px;
+  height: 18px;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.btn-next {
+  background-position: -35px 0;
+}
+
+
 /* 슬로건 */
 .slogan {
   background-color: orange;

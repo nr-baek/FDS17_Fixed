@@ -419,7 +419,7 @@ a {
   display: inline-block;
   margin-right: .2em;
 }
-.search-form input[type="search"] {
+.search-form input {
   border: 1px solid #aaa;
   border-radius: 3px;
   padding: 1px 1px 1px 5px;
@@ -596,13 +596,21 @@ a {
 }
 
 /* 신규 이벤트 및 관련 사이트*/
-/* 신규 이벤트 */
 .gradient-box {
   border: 1px solid #aaa;
   border-radius: 5px;
   padding: 10px;
   background: #ccc linear-gradient(180deg, #cccc, #eee);
 }
+.event-heading, .related-heading {
+  font-size: 1.6rem;
+  margin: 0;
+}
+.event-heading span, .related-heading span {
+  color: #e65400;
+}
+/* 신규 이벤트 */
+
 
 /* ir기법 */
 /* .btn-wrap {
@@ -628,13 +636,7 @@ a {
   border-bottom: 1px solid #aaa;
   position: relative;
 }
-.event-heading {
-  font-size: 1.6rem;
-  margin: 0;
-}
-.event-heading span {
-  color: #e65400;
-}
+
 .event-thumbnail, .event-brief {
   margin: 10px 0;
 }
@@ -662,6 +664,34 @@ a {
 }
 .btn-next {
   background-position: -35px 0;
+}
+
+/* 관련 사이트 */
+.related {
+  margin-top: 10px;
+}
+.related-list {
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 27px;
+  transition: all 400ms;
+}
+.related-list:hover {
+  height: 147px;
+  padding: 10px 0;
+}
+.related-list li {
+  padding: 2px 5px;
+}
+.related-list a {
+  line-height: 21px;
+  display: block;
+  text-indent: 1em;
 }
 
 

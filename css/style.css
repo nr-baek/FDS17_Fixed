@@ -769,9 +769,52 @@ a {
 
 /* 슬로건 */
 .slogan {
-  background-color: orange;
-  
+  position: relative;
+  padding: 15px 80px 15px 170px; /*콘텐츠에 영역 확보용*/
 }
+.slogan-heading {
+  margin: 0;
+  width: 110px;
+  height: 83px;
+  position: absolute; /*relative아님*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  left: 35px;
+  bottom: -25px;
+}
+.slogan-heading::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(./images/coffee.png) no-repeat scroll;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slogan-brief {
+  color: #a09784;
+  font-size: 1.3rem;
+}
+.slogan-brief q {
+  font-weight: 700;
+}
+.slogan-brief q::after {
+  content: "";
+}
+.slogan-brief q::before {
+  font-size: 3rem;
+  /* vertical-align: top; */
+  position: relative;
+  top: 10px;
+  margin-right: 5px;
+
+}
+
+
 .footer-bg {
   background-color: purple;
   width: 100%;
